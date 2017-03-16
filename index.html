@@ -61,6 +61,75 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-实验一全" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/16/实验一全/" class="article-date">
+  <time datetime="2017-03-16T05:52:17.000Z" itemprop="datePublished">2017-03-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/16/实验一全/">实验一全</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#实验一 在Github上用Markdown创建技术博客</p>
+<p>###一、实验目的<br>1.熟悉Github网站<br>2.掌握Markdown语法</p>
+<p>###二、实验任务<br>1.注册Github账号<br>2.创建Gihub Pages repository<br>3.发布第一篇博客<br>4.学习Markdown<br>5.利用Hexo生成博客并部署到Github</p>
+<p>###三、实验步骤与结果<br>1.注册github账号：Yanghan888</p>
+<p>2.创建名为 Yanghan888.githuo.io 的 Gihub Pages repository</p>
+<p>3.发布第一篇博客</p>
+<p>4.在 Markdown 上进行博客编辑</p>
+<pre><code>5.  本地配置Hexo，具体步骤如下：
+   *安装git
+   *安装node
+   *设置镜像为淘宝
+       cnpm install -g cnpm --registry=https://registry.npm.taobao.org
+   *安装hexo
+       cnpm install -g hexo-cli
+   *初始化站点
+       hexo init hexo
+       cd hexo
+       Npm install
+   *浏览本地站点
+      hexo sever
+   6.  在github上部署hexo，具体步骤如下：
+</code></pre><p>   *注册github账号：Yanghan888</p>
+<p>   *创建名为 Yanghan888.githuo.io 的 Gihub Pages repository</p>
+<p>   *发布第一篇博客</p>
+<p>   <em>在 Markdown 上进行博客编辑
+   </em>修改配置文件_config.yml的deploy部分<br>      type:git<br>      Repository:<a href="https://github.com/Yanghan888/Yanghan.github.io.git" target="_blank" rel="external">https://github.com/Yanghan888/Yanghan.github.io.git</a><br>      Branch:master<br>   <em>配置site部分<br>      title:Yanghan888的博客<br>      Author:Yanghan888<br>      Language:zh-CN
+   </em>安装hexo-deployer-git<br>      npm install hexo-deployer-git –save<br>   <em>配置git全局邮箱与名字<br>     git config –global user.email”1023688472@qq.com”<br>     git config –global user.name”Yanghan888”
+   </em>生成博客<br>     hexo generate<br>   *部署博客<br>     hexo deploy</p>
+<ol>
+<li>添加博客文章<br>hexo new myblog<br>*用VS修改文章<br>hexo\source_posts\myblog.md</li>
+<li>生成并发布到github<br>hexo d<br>hexo g</li>
+</ol>
+<p>###四、实验小结<br>    实验过程中遇到了很多问题，走了很多弯路，很多次不成功又从头来过，后来经过自己查阅资料，多次探索才能初步得到博客的原始模型，今后还将不断完善，直至博客界面新颖美观，有自己的个性。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/03/16/实验一全/" data-id="cj0bzlnxe0000wkwc8p8e6yub" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-实验一" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/03/14/实验一/" class="article-date">
@@ -115,7 +184,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/14/实验一/" data-id="cj091vpbo0000skwcvyt0od2x" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/14/实验一/" data-id="cj0bzlo070002wkwczi1jx81k" class="article-share-link">Share</a>
       
       
     </footer>
@@ -160,7 +229,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/14/hello-world/" data-id="cj091vpca0001skwcjbglfi80" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/14/hello-world/" data-id="cj0bzlnxu0001wkwczk9tn1ys" class="article-share-link">Share</a>
       
       
     </footer>
@@ -198,6 +267,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/03/16/实验一全/">实验一全</a>
+          </li>
         
           <li>
             <a href="/2017/03/14/实验一/">实验一</a>
