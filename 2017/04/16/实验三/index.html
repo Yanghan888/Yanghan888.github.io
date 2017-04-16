@@ -4,23 +4,22 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>实验二 git使用 | 欢迎来到青青草原</title>
+    <title>实验三 使用Github管理Android项目 | 欢迎来到青青草原</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="杨晗">
     
-    <meta name="description" content="一、实验目的
-1、掌握git使用
-2、掌握使用Github作为远程仓库
+    <meta name="description" content="##一、实验目的
 
-二、实验任务
-1、练习本地git操作
-2、用SSH同步本地与Github仓库
+1.掌握Android Studio中Git使用
+2.掌握Github管理项目
 
-三、实验步骤与结果
-1、在自己的github网站创建一个新的repository：test。
-2、将其克隆到桌面。
-3、将test下载到电脑磁盘中">
+##二、实验任务
+
+1.在Android Studio中新建项目
+2.添加VCS中的Git支持
+3.发布项目到Github
+4.在Android Studio中进行修改代码、提交、新建分支、合并等操">
     
     
     
@@ -80,14 +79,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/03/23/实验二/" title="实验二 git使用" itemprop="url">实验二 git使用</a>
+      <a href="/2017/04/16/实验三/" title="实验三 使用Github管理Android项目" itemprop="url">实验三 使用Github管理Android项目</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="杨晗">杨晗</a>
     </p>
   <p class="article-time">
-    <time datetime="2017-03-23T07:01:06.000Z" itemprop="datePublished">2017-03-23</time>
+    <time datetime="2017-04-16T10:55:40.000Z" itemprop="datePublished">2017-04-16</time>
     
   </p>
 </header>
@@ -97,26 +96,42 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、实验目的"><span class="toc-number">1.</span> <span class="toc-text">一、实验目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、实验任务"><span class="toc-number">2.</span> <span class="toc-text">二、实验任务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、实验步骤与结果"><span class="toc-number">3.</span> <span class="toc-text">三、实验步骤与结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、实验小结"><span class="toc-number">4.</span> <span class="toc-text">四、实验小结</span></a></li></ol>
+		
 		</div>
 		
-		<h2 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h2><ul>
-<li>1、掌握git使用</li>
-<li>2、掌握使用Github作为远程仓库</li>
+		<p>##一、实验目的</p>
+<ul>
+<li>1.掌握Android Studio中Git使用</li>
+<li>2.掌握Github管理项目</li>
 </ul>
-<h2 id="二、实验任务"><a href="#二、实验任务" class="headerlink" title="二、实验任务"></a>二、实验任务</h2><ul>
-<li>1、练习本地git操作</li>
-<li>2、用SSH同步本地与Github仓库</li>
+<p>##二、实验任务</p>
+<ul>
+<li>1.在Android Studio中新建项目</li>
+<li>2.添加VCS中的Git支持</li>
+<li>3.发布项目到Github</li>
+<li>4.在Android Studio中进行修改代码、提交、新建分支、合并等操作</li>
+<li>5.推送项目到Github</li>
+<li>6.如有多人合作，处理pull request</li>
 </ul>
-<h2 id="三、实验步骤与结果"><a href="#三、实验步骤与结果" class="headerlink" title="三、实验步骤与结果"></a>三、实验步骤与结果</h2><ul>
-<li>1、在自己的github网站创建一个新的repository：test。</li>
-<li>2、将其克隆到桌面。</li>
-<li>3、将test下载到电脑磁盘中，找到文件后放编辑器里编辑。</li>
-<li>4、当对文件进行修改后，克隆到桌面的窗口就会显示修改的内容，如下图所示：<br><img src="http://i1.piimg.com/589000/b4976343899ae4eb.png" alt="此处输入图片的描述"></li>
-<li>5、点击桌面窗口的同步按钮，将修改情况同步到github仓库，如下图所示：<br><img src="http://i1.piimg.com/589000/eac113f2cbe36ef9.png" alt="此处输入图片的描述"></li>
-<li>6、查看commits情况，显示了上次修改的时间与情况。<br><img src="http://i1.piimg.com/589000/0b7b7ccc2da147af.png" alt="此处输入图片的描述"></li>
+<p>##三、实验步骤与结果</p>
+<ul>
+<li>1、在Android Studio中新建项目：我的设计项目是校园二手交易，所以取名为Camtransaction，如下所示<br><img src="http://i2.muimg.com/589000/c71ea19e6ee3f957.png" alt="此处输入图片的描述"></li>
 </ul>
-<h2 id="四、实验小结"><a href="#四、实验小结" class="headerlink" title="四、实验小结"></a>四、实验小结</h2><p>使用git后，给我最深刻的印象就是，git号称为世界上最先进的分布式版本控制系统简直名不虚传，我们可以用git自动记录自己每次文件的改动，还可以让别人协作编辑，这样就不需要自己管理一堆类似的文件，也不需要把文件传来传去。如果想查看某次改动，只需要在软件里瞄一眼，十分适合程序员编写项目。</p>
+<p><img src="http://i2.muimg.com/589000/029eb01238e38857.png" alt="此处输入图片的描述"></p>
+<ul>
+<li><p>2、添加VCS中的Git支持：在Android Studio中的VCS中打开import into version control,然后点击share project on github,输入自己的github账号密码，如下所示<br><img src="http://i2.muimg.com/589000/bb02b88c9591c79b.png" alt="此处输入图片的描述"></p>
+</li>
+<li><p>3、发布项目到Github：点击share，将本地Android Studio中的工程文件发布到github上，如下所示<br><img src="http://i2.muimg.com/589000/69e529f8bd1dca60.png" alt="此处输入图片的描述"></p>
+</li>
+<li><p>4、在Android Studio中进行修改代码、提交、新建分支、合并等操作：</p>
+</li>
+</ul>
+<p>1）对代码进行修改，如在string.xml中修改全局变量。<br><img src="http://i2.muimg.com/589000/3e14634c4d10c09c.png" alt="此处输入图片的描述"></p>
+<p>2）提交代码，鼠标右击，选择git——commit file——commit and push，如下所示。<br><img src="http://i2.muimg.com/589000/2e35af09ba876c3a.png" alt="此处输入图片的描述"></p>
+<ul>
+<li>5、推送项目到Github：在github上，我们可以看到自己的修改情况，以及修改的时间。<br><img src="http://i2.muimg.com/589000/e9ada0dbad8c663d.png" alt="此处输入图片的描述"></li>
+</ul>
+<p>##四、实验小结<br>本学期我将把自己的校园二手交易app策划真正做出来，但是软件开发将是一个长期过程，如果每次仅在android上进行保存修改，会存在代码丢失的风险。这次实验我学会了如何把本地文件上传到自己的github网站上，以后在开发软件里的修改情况都能在github上保存，每次修改后提交还能看到修改时间和主题，同时还能从github上下载代码到本地，这给软件开发带来极大的便利和安全性。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -126,7 +141,7 @@
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2017/03/23/实验二/" data-title="实验二 git使用 | 欢迎来到青青草原" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2017/04/16/实验三/" data-title="实验三 使用Github管理Android项目 | 欢迎来到青青草原" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -135,19 +150,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/04/16/实验三/" title="实验三 使用Github管理Android项目">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  实验三 使用Github管理Android项目</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2017/03/16/实验一全/"  title="实验一 在Github上用Markdown创建技术博客">
+<a href="/2017/03/23/实验二/"  title="实验二 git使用">
  <strong>NEXT:</strong><br/> 
- <span>实验一 在Github上用Markdown创建技术博客
+ <span>实验二 git使用
 </span>
 </a>
 </div>
@@ -160,7 +167,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、实验目的"><span class="toc-number">1.</span> <span class="toc-text">一、实验目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、实验任务"><span class="toc-number">2.</span> <span class="toc-text">二、实验任务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、实验步骤与结果"><span class="toc-number">3.</span> <span class="toc-text">三、实验步骤与结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、实验小结"><span class="toc-number">4.</span> <span class="toc-text">四、实验小结</span></a></li></ol>
+  
   </div>
 
 <div id="asidepart">
