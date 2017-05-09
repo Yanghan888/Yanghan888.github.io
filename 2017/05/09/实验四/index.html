@@ -4,21 +4,25 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>实验三 使用Github管理Android项目 | 欢迎来到青青草原</title>
+    <title>实验四 Gradle使用 | 欢迎来到青青草原</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="杨晗">
     
     <meta name="description" content="一、实验目的
-1.掌握Android Studio中Git使用
-2.掌握Github管理项目
+1.掌握Gradle的使用
 
 二、实验任务
-1.在Android Studio中新建项目
-2.添加VCS中的Git支持
-3.发布项目到Github
-4.在Android Studio中进行修改代码、提交、新建分支、合并等操作
-5.推送">
+1.生成多个apk 
+2.管理依赖库
+3.编译提速
+4.增加编译内存
+5.调用终端指令
+6.精简资源
+7.清除缓存
+
+三、实验步骤与结果
+1、生成多个apk1）创建渠道占位符，在AndroidManifest文件的Application节点下">
     
     
     
@@ -78,14 +82,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/16/实验三/" title="实验三 使用Github管理Android项目" itemprop="url">实验三 使用Github管理Android项目</a>
+      <a href="/2017/05/09/实验四/" title="实验四 Gradle使用" itemprop="url">实验四 Gradle使用</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="杨晗">杨晗</a>
     </p>
   <p class="article-time">
-    <time datetime="2017-04-16T10:55:40.000Z" itemprop="datePublished">2017-04-16</time>
+    <time datetime="2017-05-09T05:35:46.000Z" itemprop="datePublished">2017-05-09</time>
     
   </p>
 </header>
@@ -99,35 +103,37 @@
 		</div>
 		
 		<h2 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h2><ul>
-<li>1.掌握Android Studio中Git使用</li>
-<li>2.掌握Github管理项目</li>
+<li>1.掌握Gradle的使用</li>
 </ul>
 <h2 id="二、实验任务"><a href="#二、实验任务" class="headerlink" title="二、实验任务"></a>二、实验任务</h2><ul>
-<li>1.在Android Studio中新建项目</li>
-<li>2.添加VCS中的Git支持</li>
-<li>3.发布项目到Github</li>
-<li>4.在Android Studio中进行修改代码、提交、新建分支、合并等操作</li>
-<li>5.推送项目到Github</li>
-<li>6.如有多人合作，处理pull request</li>
+<li>1.生成多个apk </li>
+<li>2.管理依赖库</li>
+<li>3.编译提速</li>
+<li>4.增加编译内存</li>
+<li>5.调用终端指令</li>
+<li>6.精简资源</li>
+<li>7.清除缓存</li>
 </ul>
 <h2 id="三、实验步骤与结果"><a href="#三、实验步骤与结果" class="headerlink" title="三、实验步骤与结果"></a>三、实验步骤与结果</h2><ul>
-<li>1、在Android Studio中新建项目：我的设计项目是校园二手交易，所以取名为Camtransaction，如下所示<br><img src="http://i2.muimg.com/589000/c71ea19e6ee3f957.png" alt="此处输入图片的描述"></li>
+<li>1、生成多个apk<br>1）创建渠道占位符，在AndroidManifest文件的Application节点下，创建如下所示的meda-data节点：<br><img src="http://i4.buimg.com/589000/03191198b468ada3.png" alt="此处输入图片的描述"></li>
 </ul>
-<p><img src="http://i2.muimg.com/589000/029eb01238e38857.png" alt="此处输入图片的描述"></p>
+<p>2）配置Gradlew脚本<br><img src="http://i4.buimg.com/589000/7392da916c139487.png" alt="此处输入图片的描述"></p>
+<p>3）在终端执行gradlew build命令，在项目/app/build/outputs/apk下查看生成的渠道包，如下所示：<br><img src="http://i4.buimg.com/589000/7a1e1ad16031678a.png" alt="此处输入图片的描述"></p>
 <ul>
-<li><p>2、添加VCS中的Git支持：在Android Studio中的VCS中打开import into version control,然后点击share project on github,输入自己的github账号密码，如下所示<br><img src="http://i2.muimg.com/589000/bb02b88c9591c79b.png" alt="此处输入图片的描述"></p>
+<li><p>2、管理依赖库<br>1）Gradle依赖库缓存，利用其通知机制及依赖检查。利用Gradle提供的task可以很方便地解决依赖问题，其中gradlew androidDependencies的使用效果如下所示：<br><img src="http://i4.buimg.com/589000/1838fb1b28efcc2b.jpg" alt="此处输入图片的描述"><br>2）Gradle依赖统一管理，在根目录的build.gradle脚本中编写如下代码：<br><img src="http://i4.buimg.com/589000/361c7e189ac47119.png" alt="此处输入图片的描述"><br>3）在全局Gradlew脚本中，指定了android和dependencies两个列表，并在其中配置了统一的参数和对应的值。<br><img src="http://i4.buimg.com/589000/89c7e3777c59d05b.png" alt="此处输入图片的描述"><br><img src="http://i4.buimg.com/589000/fec8a1cec2a8a0aa.png" alt="此处输入图片的描述"></p>
 </li>
-<li><p>3、发布项目到Github：点击share，将本地Android Studio中的工程文件发布到github上，如下所示<br><img src="http://i2.muimg.com/589000/69e529f8bd1dca60.png" alt="此处输入图片的描述"></p>
+<li><p>3、编译提速<br>1）在gradlew.properties中添加如下代码，开启Gradle的多线程和多核心支持。<br><img src="http://i4.buimg.com/589000/74ccf638052aae85.png" alt="此处输入图片的描述"><br>2）在build.gradlew中添加如下代码，用于开启Gradle的增量编译，增加编译的内存资源到4G。<br><img src="http://i4.buimg.com/589000/fbf3bd09bb4bc32e.png" alt="此处输入图片的描述"></p>
 </li>
-<li><p>4、在Android Studio中进行修改代码、提交、新建分支、合并等操作：</p>
+<li><p>4、增加编译内存<br>在gradlew.propertices文件中找到如下代码，在遇到编译时发生内存溢出问题时，可以修改其中的内存设置进行调整。如果要增大内存使用，只需反注释这两行代码，并修改内存大小即可。<br><img src="http://i4.buimg.com/589000/6f082bb33352a217.png" alt="此处输入图片的描述"></p>
+</li>
+<li><p>5、调用终端指令<br>类似于java中的Runtime.exec()方法来获取终端指令数据，Gradle中通过如下代码实现调用终端指令。<br><img src="http://i4.buimg.com/589000/8e8a59b307066d7a.png" alt="此处输入图片的描述"></p>
+</li>
+<li><p>6、精简资源<br>方法一：在build.gradle脚本中找到android方法中的buildTypes方法写入以下代码，minifyEnabled对代码进行优化、精简；shrinkResources用于清除项目工程中无效的资源文件，但必须依赖于minifyEnabled指令。<br><img src="http://i4.buimg.com/589000/4850b865a0c831a5.png" alt="此处输入图片的描述"><br>方法二：直接用快捷指令来进行资源精简。快捷键Ctrl+Shift+A，输入“remove unused resources”，与方法一效果一致。<br><img src="http://i4.buimg.com/589000/437b63e0e13a1dfa.png" alt="此处输入图片的描述"></p>
+</li>
+<li><p>7、清除缓存<br>通过Gradlew clean或者gradlew-refresh-dependencies指令来强制刷新所依赖的库项目，从而获得新的版本库。</p>
 </li>
 </ul>
-<p>1）对代码进行修改，如在string.xml中修改全局变量。<br><img src="http://i2.muimg.com/589000/3e14634c4d10c09c.png" alt="此处输入图片的描述"></p>
-<p>2）提交代码，鼠标右击，选择git——commit file——commit and push，如下所示。<br><img src="http://i2.muimg.com/589000/2e35af09ba876c3a.png" alt="此处输入图片的描述"></p>
-<ul>
-<li>5、推送项目到Github：在github上，我们可以看到自己的修改情况，以及修改的时间。<br><img src="http://i2.muimg.com/589000/e9ada0dbad8c663d.png" alt="此处输入图片的描述"></li>
-</ul>
-<h2 id="四、实验小结"><a href="#四、实验小结" class="headerlink" title="四、实验小结"></a>四、实验小结</h2><p>本学期我将把自己的校园二手交易app策划真正做出来，但是软件开发将是一个长期过程，如果每次仅在android上进行保存修改，会存在代码丢失的风险。这次实验我学会了如何把本地文件上传到自己的github网站上，以后在开发软件里的修改情况都能在github上保存，每次修改后提交还能看到修改时间和主题，同时还能从github上下载代码到本地，这给软件开发带来极大的便利和安全性。</p>
+<h2 id="四、实验小结"><a href="#四、实验小结" class="headerlink" title="四、实验小结"></a>四、实验小结</h2><p>Gradle用于替换Eclipse所使用的ant作为默认的Android编译工具，其功能的强大导致其使用难度也很大，我通过反反复复的看教材才能提取出一些方法和步骤，如果不懂Gradle的配置，就无法使用其功能，学习这一章需要花费大量时间练习和查阅资料。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -137,7 +143,7 @@
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2017/04/16/实验三/" data-title="实验三 使用Github管理Android项目 | 欢迎来到青青草原" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2017/05/09/实验四/" data-title="实验四 Gradle使用 | 欢迎来到青青草原" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -146,19 +152,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/05/09/实验四/" title="实验四 Gradle使用">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  实验四 Gradle使用</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2017/03/23/实验二/"  title="实验二 git使用">
+<a href="/2017/04/16/实验三/"  title="实验三 使用Github管理Android项目">
  <strong>NEXT:</strong><br/> 
- <span>实验二 git使用
+ <span>实验三 使用Github管理Android项目
 </span>
 </a>
 </div>
